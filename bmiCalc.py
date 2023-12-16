@@ -1,11 +1,8 @@
 def calculate_bmi(weight, height):
     """Calculates the BMI (Body Mass Index) of a person."""
-    if height > 2.4384 or height < 0:
-        raise ValueError("Invalid height")
-    if weight > 200 or weight < 0:
-        raise ValueError("Invalid weight")
+    
     bmi = weight / (height ** 2)
-    return bmi
+    return bmi, categorize_bmi(bmi)
 
 def categorize_bmi(bmi):
     """Categorizes the BMI based on predefined categories."""
@@ -17,10 +14,3 @@ def categorize_bmi(bmi):
         return "Overweight"
     else:
         return "Obesity"
-
-weight = float(input("Enter your weight in kilograms: "))
-height = float(input("Enter your height in meters: "))
-
-bmi = calculate_bmi(weight, height)
-print("Your BMI is:", bmi)
-print("You are:", categorize_bmi(bmi))
