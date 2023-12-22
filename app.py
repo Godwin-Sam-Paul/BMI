@@ -18,19 +18,15 @@ def bmi(weight,height):
         return
     
     bmi,category = calculate_bmi(weight, height)
-    # insert_measurement(weight, height,bmi)
+    insert_measurement(weight, height,bmi)
     display_scale_image(category)
     result_label.configure(text=f"Your BMI: {bmi:.2f}\n You are: {category}",text_color="white")
 
 def display_scale_image(category):
     image_path = f"images/{category}.png"
     scale_image=ct.CTkImage(Image.open(image_path),size=(890,520))
-    # image = Image.open(image_path)
-    # image = image.resize((200, 200), Image.ANTIALIAS)
-    # photo = ImageTk.PhotoImage(image)
 
     scale_image_label.configure(image=scale_image)
-    # scale_image_label.image = photo
 
    
 
