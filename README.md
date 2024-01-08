@@ -16,7 +16,7 @@ To use the BMI Calculator app, follow these steps:
 
 1. **Clone the Repository:**
    ```bash
-   git clone https://github.com/yourusername/bmi-calculator.git
+   git clone https://github.com/mks2122/BMICalculator.git
    ```
 
 2. **Install Dependencies:**
